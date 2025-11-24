@@ -18,10 +18,10 @@ class DataDownloader:
         Returns:
         pandas.DataFrame: A DataFrame containing the historical stock data.
         """
-        data = yf.download(ticker, start=start_date, end=end_date, interval=interval)
+        data = yf.download(ticker, start=start_date, end=end_date, interval=interval, auto_adjust=False)
         return data
     
-    def download_multiple_stocks(self, tickers: list, start_date:str, end_date:str, interval='1y') -> dict:
+    def download_multiple_stocks(self, tickers: list, start_date:str, end_date:str, interval='1d') -> dict:
         """
         Downloads historical stock data for multiple ticker symbols.
 
