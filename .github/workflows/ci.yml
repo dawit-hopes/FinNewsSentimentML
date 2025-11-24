@@ -1,12 +1,12 @@
-name: CI Pipeline
+name: Python CI
 
 on:
     push:
         branches:
-        - main
+            - main
     pull_request:
         branches:
-        - main
+            - main
 
 jobs:
     build:
